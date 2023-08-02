@@ -19,7 +19,7 @@ subcollection: power-iaas
 This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysShort}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
 
-{{site.data.keyword.dl_full_notm}} (2.0) Connect is available in all current locations. IBM clients can always contact Megaport connectivity services directly to procure their services.
+{{site.data.keyword.dl_full_notm}} Connect is available in all current locations. IBM clients can always contact Megaport connectivity services directly to procure their services.
 {: important}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
@@ -38,7 +38,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
     - Internet - Access the internet through resources that are hosted in any of these three infrastructure environments.
     - Remote - Connect remote networks to your IBM Cloud networks. You can use the following services to connect to a remote network:
         - Internet VPN - Uses the public internet to connect remote networks and their IBM Cloud networks through a VPN. The VPN is terminated on gateway devices or a service within IBM Cloud.
-        - {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, on-premises network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). 
+        - {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, on-premises network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}}](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). 
 
       You can connect {{site.data.keyword.dl_short}}s to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the on-premises network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
       {: note}
@@ -48,12 +48,12 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 These use cases describe the following deployment topologies:
 
-* Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM Cloud {{site.data.keyword.dl_short}} (2.0). Typical use cases for this topology are as follows:
+* Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM Cloud {{site.data.keyword.dl_short}}. Typical use cases for this topology are as follows:
     - Use IBM Cloud classic x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
     - Build a backup and restore environment based on [IBM Spectrum Protect Cloud Blueprints](https://www.ibm.com/support/pages/ibm-spectrum-protect-cloud-blueprints) for both IBM Spectrum Protect and IBM Spectrum Protect Plus topologies. Also, see [AIX Backups with {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf).
-* Connecting {{site.data.keyword.powerSys_notm}} to the IBM Cloud VPC infrastructure environment by using {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is to use IBM Cloud VPC x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
-* Connecting {{site.data.keyword.powerSys_notm}} to on-premises network by using Megaport or {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is that you require access to your Power virtual servers from your external networks, such as networks on your on-premises. This topology uses Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect.
-* Connecting two {{site.data.keyword.powerSys_notm}} environments by using Megaport or {{site.data.keyword.dl_short}} Connect. This topology connects two or more Power virtual server environments together by using Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect. Connecting two or more environments together enables use cases, such as disaster recovery.
+* Connecting {{site.data.keyword.powerSys_notm}} to the IBM Cloud VPC infrastructure environment by using {{site.data.keyword.dl_short}} Connect. A typical use case for this topology is to use IBM Cloud VPC x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
+* Connecting {{site.data.keyword.powerSys_notm}} to on-premises network by using Megaport or {{site.data.keyword.dl_short}} Connect. A typical use case for this topology is that you require access to your Power virtual servers from your external networks, such as networks on your on-premises. This topology uses Megaport services or {{site.data.keyword.dl_short}} Connect.
+* Connecting two {{site.data.keyword.powerSys_notm}} environments by using Megaport or {{site.data.keyword.dl_short}} Connect. This topology connects two or more Power virtual server environments together by using Megaport services or {{site.data.keyword.dl_short}} Connect. Connecting two or more environments together enables use cases, such as disaster recovery.
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through the IBM classic infrastructure by using private SSL connection and a jump server. This is a specific use case for connecting to the classic environment so that the SSL VPN connection can be used to access your {{site.data.keyword.powerSys_notm}}s for operations and administration tasks.
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through the IBM Cloud classic infrastructure by using an internet IPsec VPN connection.  This use case describes how to connect to the classic environment so that an IPsec VPN connection can be used to access your classic and {{site.data.keyword.powerSys_notm}}s. Typically, this network architecture is used for small production environments or proof-of-concept, development, and test purposes.
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through an IBM Cloud classic infrastructure by using a private {{site.data.keyword.dl_short}}. A {{site.data.keyword.dl_short}} enables your remote networks to connect to IBM Cloud over a private connection that does not use public networks.
@@ -61,17 +61,17 @@ These use cases describe the following deployment topologies:
 
 Multiple topologies, described in this document, can be layered to create a topology that suits your deployment needs.
 
-## Connecting to classic infrastructure by using {{site.data.keyword.dl_short}} (2.0)
+## Connecting to classic infrastructure by using {{site.data.keyword.dl_short}}
 {: #network-reference-architecture-classic}
 
-In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to IBM Cloud resources hosted in a classic infrastructure environment. You can either [order {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) connections, or use IBM Cloud connections. 
+In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to IBM Cloud resources hosted in a classic infrastructure environment. You can either [order {{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) connections, or use IBM Cloud connections. 
 
-![Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM {{site.data.keyword.dl_short}} (2.0)](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 1. Connect to classic infrastructure with {{site.data.keyword.dl_short}} (2.0)" caption-side="bottom"}
+![Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM {{site.data.keyword.dl_short}}](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 1. Connect to classic infrastructure with {{site.data.keyword.dl_short}}" caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap the subnets with your IBM Cloud classic private subnets, or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
-2. Order [{{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0), or provision an [IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) instance from the {{site.data.keyword.powerSys_notm}} interface to connect the {{site.data.keyword.powerSys_notm}} router to the IBM Cloud classic infrastructure. This connection is established and operated by the IBM Cloud team and you have no direct access or control. 
+2. Order [{{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0), or provision an [IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) instance from the {{site.data.keyword.powerSys_notm}} interface to connect the {{site.data.keyword.powerSys_notm}} router to the IBM Cloud classic infrastructure. This connection is established and operated by the IBM Cloud team and you have no direct access or control. 
 
    Consider the following information before you proceed:
 
@@ -88,20 +88,20 @@ Complete the following steps to implement this scenario:
 
     All the routers in all classic infrastructure data centers and PoPs across the global IBM Cloud backbone are connected to the {{site.data.keyword.powerSys_notm}} router by using the {{site.data.keyword.dl_short}} Connect VRF-enabled connection. 
 
-    Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+    Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}}](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
     {: note}
 
 ## Connecting to VPC by using {{site.data.keyword.dl_short}} Connect
 {: #network-reference-architecture-vpc}
 
-In this deployment topology, a {{site.data.keyword.dl_short}} (2.0) is used to connect your {{site.data.keyword.powerSys_notm}} networks to resources that are hosted in the IBM Cloud VPC infrastructure.
+In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to resources that are hosted in the IBM Cloud VPC infrastructure.
 
 ![Connect to VPC](./images/network-connect-to-vpc.svg "Connect to VPC"){: caption="Figure 2. Connect to VPC" caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap these subnets with your IBM Cloud classic private subnets or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
-2. Order [{{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0), or provision an [IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) instance from the {{site.data.keyword.powerSys_notm}} interface to connect the {{site.data.keyword.powerSys_notm}} router to the IBM Cloud classic infrastructure. This connection is established and operated by the IBM Cloud team and you have no direct access or control.
+2. Order [{{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0), or provision an [IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) instance from the {{site.data.keyword.powerSys_notm}} interface to connect the {{site.data.keyword.powerSys_notm}} router to the IBM Cloud classic infrastructure. This connection is established and operated by the IBM Cloud team and you have no direct access or control.
 
     When this connection is established, the BGP is configured by the IBM Cloud team in the following way:
     - The {{site.data.keyword.powerSys_notm}} router advertises your {{site.data.keyword.powerSys_notm}} subnets to the router in the VPC infrastructure.
@@ -119,7 +119,7 @@ Complete the following steps to implement this scenario:
 4. Create Virtual Private Endpoints (VPEs) for services of interest such as DNS, NTP, and IBM Cloud Object Storage. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
 5. If you want to access the endpoint network, use a VPC virtual server instance to proxy the any required endpoint services that do not support VPEs.
 
-Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}}](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 <!--
 ## Connecting to IBM Cloud services
@@ -177,7 +177,7 @@ The {{site.data.keyword.powerSys_notm}} router is the default gateway for your P
 ## Connecting two Power virtual server environments
 {: #network-reference-architecture-pvs2pvs}
 
-In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments located at two different data centers.
+In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} Connect is used to provide connectivity between Power virtual server environments located at two different data centers.
 
 ![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 4. Connecting Power virtual server environments" caption-side="bottom"}
 
@@ -251,7 +251,7 @@ This deployment topology leverages the IBM Cloud classic infrastructure gateway 
 Complete the following steps to implement this scenario:
 
 1. [Set up an IBM Cloud gateway appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started) to establish an IPsec VPN connection from your remote location to the IBM Cloud classic infrastructure.
-2. Complete all steps that are mentioned in [Connect to classic infrastructure by using IBM Cloud (2.0) {{site.data.keyword.dl_short}}](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-classic). This includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the [VRF option](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+2. Complete all steps that are mentioned in [Connect to classic infrastructure by using {{site.data.keyword.dl_short}}](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-classic). This includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} Connect or an IBM Cloud connection instance with the [VRF option](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
    The IBM Cloud classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your classic environment.
@@ -270,14 +270,14 @@ Additionally, the x86 servers can be deployed on to the subnets contained within
 
 To connect your external networks to your {{site.data.keyword.powerSys_notm}} subnets, you can use the {{site.data.keyword.dl_short}} service; however, you cannot use this connectivity for a direct connection as both your {{site.data.keyword.powerSys_notm}} subnets and your remote networks are considered to be external networks to the VRF and direct external-to-external traffic is prohibited. Therefore, in this deployment topology, a gateway appliance and GRE tunnels are used to provide connectivity.
 
-This topology focuses on {{site.data.keyword.dl_short}} (2.0) service that has the following offerings:
+This topology focuses on {{site.data.keyword.dl_short}} service that has the following offerings:
 
 * {{site.data.keyword.dl_short}} Dedicated - A single-tenant, fiber-based, cross-connect into the IBM Cloud Private network.
 * {{site.data.keyword.dl_short}} Connect - Uses a service provider who is already connected to the IBM Cloud Private network to deliver multi-tenant, high capacity links, also known as network-to-network interfaces.
 
-Currently, {{site.data.keyword.dl_short}} (2.0) is not available in all locations. For more information, see [Locations and providers](/docs/dl?topic=dl-locations).
+Currently, {{site.data.keyword.dl_short}} is not available in all locations. For more information, see [Locations and providers](/docs/dl?topic=dl-locations).
 
-If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location, then see
+If {{site.data.keyword.dl_short}} is not available at a suitable location, then see
 [Getting started with IBM Cloud {{site.data.keyword.dl_short}} on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link).
 
 ![{{site.data.keyword.dl_short}} on Classic deployment scenario](./images/network-dl-gre.svg "{{site.data.keyword.dl_short}}"){: caption="Figure 7. {{site.data.keyword.dl_short}} on Classic deployment scenario" caption-side="bottom"}
@@ -291,7 +291,7 @@ This deployment topology leverages the IBM Cloud classic infrastructure gateway 
 Complete the following steps to implement this scenario:
 
 1. [Set up an IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
-2. Complete all steps that are mentioned in [Connect-to-classic infrastructure by using IBM {{site.data.keyword.dl_short}}](/docs/gateway-appliance?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-privatessl). It includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
+2. Complete all steps that are mentioned in [Connect-to-classic infrastructure by using IBM {{site.data.keyword.dl_short}}](/docs/gateway-appliance?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-privatessl). It includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} Connect or an IBM Cloud connection instance with the VRF option.
 3. The IBM Cloud classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your classic environment.
     - Your {{site.data.keyword.powerSys_notm}} subnets advertised by the {{site.data.keyword.powerSys_notm}} router.
